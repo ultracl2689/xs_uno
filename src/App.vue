@@ -13,8 +13,8 @@ const altTexts = [
   '活動辦法',
 ]
 
-const signupUrl =
-  'https://docs.google.com/forms/d/e/1FAIpQLSeDzGj9mdnR_P8A7BJplJ8mSK6aIkLHxkqp4-_J7eZuwE0ACQ/viewform'
+// const signupUrl =
+//   'https://docs.google.com/forms/d/e/1FAIpQLSeDzGj9mdnR_P8A7BJplJ8mSK6aIkLHxkqp4-_J7eZuwE0ACQ/viewform'
 
 // 開發者模式：設為 true 時顯示「暫無此頁面」佔位頁
 const isDev = import.meta.env.DEV
@@ -41,7 +41,6 @@ const devMode = ref(false)
     <a
       v-for="(src, index) in images"
       :key="index"
-      :href="signupUrl"
       target="_blank"
       rel="noopener"
       class="block"
