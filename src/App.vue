@@ -1,9 +1,9 @@
 <script setup>
-const base = import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL;
 
 // 報名連結（只保留最後一頁的按鈕導向此處）
 const signupUrl =
-  'https://www.instagram.com/allstar_xs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+  "https://www.instagram.com/allstar_xs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 
 // 每一頁 = 一張圖片。
 // covers：用深色色塊蓋掉圖片中已烘焙進去、要「移除」的報名按鈕。
@@ -12,55 +12,61 @@ const signupUrl =
 const pages = [
   {
     src: `${base}1.jpg`,
-    alt: 'UNO 大賽 x XS 能量飲料',
+    alt: "UNO 大賽 x XS 能量飲料",
     covers: [
       // 底部「立即報名 >>>」橫條
-      { top: '75.5%', left: '2%', width: '96%', height: '9.5%' },
+      { top: "75.5%", left: "2%", width: "96%", height: "9.5%" },
     ],
     link: null,
   },
   {
     src: `${base}2.jpg`,
-    alt: 'XS 能量飲料系列介紹',
+    alt: "XS 能量飲料系列介紹",
     covers: [
       // 整列導覽列（活動介紹／賽制說明…＋右上立即報名）
-      { top: '0%', left: '0%', width: '100%', height: '5.5%' },
+      { top: "0%", left: "0%", width: "100%", height: "5.5%" },
       // 底部「立即報名參加 >」
-      { top: '90%', left: '10%', width: '80%', height: '9%' },
+      { top: "90%", left: "10%", width: "80%", height: "9%" },
     ],
     link: null,
   },
   {
     src: `${base}3.jpg`,
-    alt: 'XS 的故事',
+    alt: "XS 的故事",
     covers: [
       // 整列導覽列（活動介紹／賽制說明…＋右上立即報名）
-      { top: '0%', left: '0%', width: '100%', height: '5.5%' },
+      { top: "0%", left: "0%", width: "100%", height: "5.5%" },
     ],
     link: null,
   },
   {
     src: `${base}4.jpg`,
-    alt: 'XS 全口味介紹',
+    alt: "XS 全口味介紹",
     covers: [
       // 整列導覽列（活動介紹／賽制說明…＋右上立即報名）
-      { top: '0%', left: '0%', width: '100%', height: '5.5%' },
+      { top: "0%", left: "0%", width: "100%", height: "5.5%" },
       // 底部「立即報名參加 >」
-      { top: '90%', left: '14%', width: '72%', height: '9%' },
+      { top: "90%", left: "14%", width: "72%", height: "9%" },
     ],
     link: null,
   },
   {
     src: `${base}5.jpg`,
-    alt: '活動辦法',
+    alt: "賽制",
+    covers: [{ top: "0%", left: "0%", width: "100%", height: "5.5%" }],
+    link: null,
+  },
+  {
+    src: `${base}6.jpg`,
+    alt: "活動辦法",
     covers: [
       // 整列導覽列（移除，只保留下方主按鈕）
-      { top: '0%', left: '0%', width: '100%', height: '5.5%' },
+      { top: "0%", left: "0%", width: "100%", height: "5.5%" },
     ],
     // 底部「立即報名」主按鈕：保留並導向報名連結
-    link: { top: '85%', left: '14%', width: '72%', height: '8%' },
+    link: { top: "85%", left: "14%", width: "72%", height: "8%" },
   },
-]
+];
 </script>
 
 <template>
@@ -74,7 +80,12 @@ const pages = [
           v-for="(c, ci) in page.covers"
           :key="ci"
           class="pointer-events-none absolute bg-black"
-          :style="{ top: c.top, left: c.left, width: c.width, height: c.height }"
+          :style="{
+            top: c.top,
+            left: c.left,
+            width: c.width,
+            height: c.height,
+          }"
         />
 
         <!-- 可點擊報名熱區（僅最後一頁） -->
