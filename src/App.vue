@@ -64,7 +64,7 @@ const pages = [
       { top: "0%", left: "0%", width: "100%", height: "5.5%" },
     ],
     // 底部「立即報名」主按鈕：保留並導向報名連結
-    link: { top: "88%", left: "14%", width: "72%", height: "9%" },
+    link: { top: "89.5%", left: "14%", width: "72%", height: "7%" },
   },
 ];
 </script>
